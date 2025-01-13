@@ -14,6 +14,7 @@ public class ArrayUtils {
             i++;
         }
 
+        scanner.close();
         return myArray;
     }
 }
