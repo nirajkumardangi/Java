@@ -1,0 +1,41 @@
+# Ignore Maven and Gradle directories and build output
+/target/
+/bin/
+/out/
+
+# Ignore Eclipse project files
+/.project
+/.classpath
+/.settings/
+
+# Ignore IntelliJ IDEA project files
+/.idea/
+/*.iml
+
+# Ignore NetBeans project files
+/nbproject/
+
+# Ignore OS-specific files
+.DS_Store      # macOS Finder
+Thumbs.db      # Windows image cache
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+
+# Ignore Java build artifacts
+*.class
+*.jar
+*.war
+*.ear
+
+# Ignore other IDE-specific files
+.vscode/
+*.swp
+
+# Ignore personal IDE settings
+.idea/
+
+# Ignore build system-specific files
+.gradle/
+build/
