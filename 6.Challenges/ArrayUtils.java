@@ -9,12 +9,11 @@ public class ArrayUtils {
         int i = 0;
 
         while (i < size) {
-            System.out.print("Enter the array element of index-" + i + " : ");
+            System.out.print("index: " + i + " : ");
             myArray[i] = scanner.nextInt();
             i++;
         }
 
-        scanner.close();
         return myArray;
     }
 }
