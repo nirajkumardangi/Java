@@ -11,13 +11,15 @@ public class NumberOfOccurrences {
     // input the target value
     System.out.print("Enter the value to find occurrences of: ");
     int target = scanner.nextInt();
-    scanner.close();
-
+    
     // find number of occurrences
     int totalOccurs = numOfOccurrences(numArray, target);
-
+    
     // print the result
     System.out.println("The value " + target + " occurs " + totalOccurs + " times in the array");
+
+    // close scanner
+    scanner.close();
   }
 
   // method to find number of occurrences
