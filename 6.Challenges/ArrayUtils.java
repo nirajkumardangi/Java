@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+// input the size & elements of an array
 public class ArrayUtils {
     public static int[] inputArray() {
         Scanner scanner = new Scanner(System.in);
@@ -13,7 +14,6 @@ public class ArrayUtils {
             myArray[i] = scanner.nextInt();
             i++;
         }
-
         return myArray;
     }
 }
