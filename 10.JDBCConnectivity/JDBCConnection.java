@@ -13,18 +13,16 @@ public class JDBCConnection {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
             // 2. Establish a connection to the database
-            Connection con = DriverManager.getConnection(url, username, password);
+            Connection connection = DriverManager.getConnection(url, username, password);
 
             // 3. Create a Statement object to execute the query
-            Statement statement = con.createStatement();
+            Statement statement = connection.createStatement();
 
-            // 4. Define the SQL query to retrieve data from the 'students' table
+            // 4. Execute the query and store the result in ResultSet
             String query = "select * from students";
-
-            // 5. Execute the query and store the result in ResultSet
             ResultSet resultSet = statement.executeQuery(query);
 
-            // 6. Iterate through the ResultSet and print each student's data
+            // 5. Iterate through the ResultSet and print each student's data
             while (resultSet.next()) {
                 int id = resultSet.getInt("id");          // Get student ID
                 String name = resultSet.getString("name"); // Get student name
@@ -38,6 +36,12 @@ public class JDBCConnection {
                 System.out.print("MARKS : " + marks);
                 System.out.println(" ");
             }
+
+            // 6. Close the Resources
+            resultSet.close();
+            statement.close();
+            connection.close();
+
         } catch (ClassNotFoundException | SQLException e) {
             // Handle exceptions related to driver loading or SQL operations
             System.out.println(e.getMessage());
